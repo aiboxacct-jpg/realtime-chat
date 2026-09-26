@@ -1,7 +1,7 @@
 import { eq } from "drizzle-orm";
-import { getDb } from "./db";
-import { hashToken, newSessionToken } from "./password";
-import { sessions, users } from "./schema";
+import { getDb } from "./db.js";
+import { hashToken, newSessionToken } from "./password.js";
+import { sessions, users } from "./schema.js";
 
 const SESSION_TTL_MS = 30 * 24 * 60 * 60 * 1000; // 30 days
 

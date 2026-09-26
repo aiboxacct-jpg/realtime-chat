@@ -1,6 +1,6 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import { json, readJsonBody, requireMethod } from "../../lib/http";
-import { deleteSession } from "../../lib/session";
+import { json, readJsonBody, requireMethod } from "../../lib/http.js";
+import { deleteSession } from "../../lib/session.js";
 
 // POST /api/auth/logout  { token } -> { ok: true }
 export default async function handler(req: VercelRequest, res: VercelResponse) {

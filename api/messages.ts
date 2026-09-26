@@ -1,10 +1,10 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 import { desc, eq } from "drizzle-orm";
-import { getDb } from "../lib/db";
-import { bearerToken, json, readJsonBody } from "../lib/http";
-import { getUserForToken } from "../lib/session";
-import { messages, users } from "../lib/schema";
-import { validMessageBody } from "../lib/validation";
+import { getDb } from "../lib/db.js";
+import { bearerToken, json, readJsonBody } from "../lib/http.js";
+import { getUserForToken } from "../lib/session.js";
+import { messages, users } from "../lib/schema.js";
+import { validMessageBody } from "../lib/validation.js";
 
 // GET  /api/messages            (Authorization: Bearer <token>)
 //   -> { ok: true, messages: [{ id, body, created_at, user }] } | { ok: false, message }

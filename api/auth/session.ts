@@ -1,6 +1,6 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import { bearerToken, json, requireMethod } from "../../lib/http";
-import { getUserForToken } from "../../lib/session";
+import { bearerToken, json, requireMethod } from "../../lib/http.js";
+import { getUserForToken } from "../../lib/session.js";
 
 // GET /api/auth/session  (Authorization: Bearer <token>)
 // -> { authenticated: true, user } | { authenticated: false }

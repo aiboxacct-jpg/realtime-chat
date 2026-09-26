@@ -1,15 +1,15 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 import { eq } from "drizzle-orm";
-import { getDb } from "../../lib/db";
-import { json, readJsonBody, requireMethod } from "../../lib/http";
-import { verifyPassword } from "../../lib/password";
-import { createSession } from "../../lib/session";
-import { users } from "../../lib/schema";
+import { getDb } from "../../lib/db.js";
+import { json, readJsonBody, requireMethod } from "../../lib/http.js";
+import { verifyPassword } from "../../lib/password.js";
+import { createSession } from "../../lib/session.js";
+import { users } from "../../lib/schema.js";
 import {
   normalizeUsernameKey,
   validPassword,
   validUsername,
-} from "../../lib/validation";
+} from "../../lib/validation.js";
 
 // POST /api/auth/login  { username, password }
 // -> { ok: true, token, user } | { ok: false, code, message }
